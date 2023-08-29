@@ -1,13 +1,15 @@
 #!/bin/bash -euo
 
-HOSTNAME:=$(shell hostname)
-BRANCH:=master
+. ~/ISUCON-tips/config.sh
+. ~/ISUCON-tips/common.sh
+
+BRANCH=$1
+
+DEPLOY_APP=${CLONE_DIR}/${REPOSITORY}-${BRANCH}
 
 # BRANCHの最新コードを取る
-git fetch 
-git reset --hard origin/$(BRANCH)
-git switch -C $(BRANCH) origin/$(BRANCH)
+getSource
 
 # アプリケーションのビルド
-cd /home/isucon/webapp/go
+cd ${DEPLOY_APP}/webapp/go
 go build -o isuconquest

@@ -13,9 +13,13 @@ ISUCON の秘伝のタレ
 ## How to use
 
 ```bash
-# BRANCH_NAMEのコードをサーバーにデプロイ
-deploy.sh ${BRANCH_NAME}
+# サーバーにISUCON-tipsをclone
+cd ~
+git clone git@github.com:Baplisca/ISUCON-tips.git
 
-# BRANCH_NAMEのコードをサーバーで動かす
-switch.sh ${BRANCH_NAME}
+# BRANCH_NAMEのコードをサーバーにデプロイ
+~/ISUCON-tips/deploy.sh ${BRANCH_NAME}
+
+# BRANCH_NAMEのコードでサーバーで動かす
+~/ISUCON-tips/switch.sh ${BRANCH_NAME}
 ```
