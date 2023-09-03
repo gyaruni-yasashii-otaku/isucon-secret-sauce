@@ -6,7 +6,8 @@ function getSource() {
     local BRANCH=$1
 
     CLONE_DEST=${CLONE_DIR}/${REPOSITORY}-${BRANCH}
-    if [-e "${CLONE_DEST}"]; then
+    echo "CLONE_DEST ${CLONE_DEST}"
+    if [ -e "${CLONE_DEST}" ]; then
         rm -rf ${CLONE_DEST}
         echo "delete previous directory"
     fi

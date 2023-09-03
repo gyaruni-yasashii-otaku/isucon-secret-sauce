@@ -6,8 +6,8 @@
 . ~/ISUCON-tips/common.sh
 
 # Argument check
-if [$# -ne 1]; then
-    echo "Argument Error: please set argument. ex) ~/ISUCON-tips/switch.sh master"
+if [ $# -ne 1 ]; then
+    echo "Argument Error: please set argument. ex) ~/ISUCON-tips/switch.sh main"
     exit 1
 fi
 
@@ -22,3 +22,8 @@ fi
 
 ln -s ${SWITCH_APP} ${TARGET_LINK}
 echo "switched app ${SWITCH_APP}"
+
+# アプリケーションのビルド
+echo "build app"
+cd ${DEPLOY_APP}/webapp/golang
+go build -o private-isu main.go

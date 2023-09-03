@@ -5,8 +5,8 @@ echo "load other sh scripts"
 . ~/ISUCON-tips/common.sh
 
 # Argument check
-if [$# -ne 1]; then
-    echo "Argument Error: please set argument. ex) ~/ISUCON-tips/deploy.sh master"
+if [ $# -ne 1 ]; then
+    echo "Argument Error: please set argument. ex) ~/ISUCON-tips/deploy.sh main"
     exit 1
 fi
 
@@ -15,9 +15,4 @@ DEPLOY_APP=${CLONE_DIR}/${REPOSITORY}-${BRANCH}
 
 # BRANCHの最新コードを取る
 echo "getSource BRANCH:${BRANCH}"
-getSource
-
-# アプリケーションのビルド
-echo "build app"
-cd ${DEPLOY_APP}/webapp/go
-go build -o isuconquest
+getSource ${BRANCH}
