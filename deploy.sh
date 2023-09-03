@@ -1,5 +1,6 @@
 #!/bin/bash -euo
 
+echo "load other sh scripts"
 . ~/ISUCON-tips/config.sh
 . ~/ISUCON-tips/common.sh
 
@@ -10,12 +11,13 @@ if [$# -ne 1]; then
 fi
 
 BRANCH=$1
-
 DEPLOY_APP=${CLONE_DIR}/${REPOSITORY}-${BRANCH}
 
 # BRANCHの最新コードを取る
+echo "getSource BRANCH:${BRANCH}"
 getSource
 
 # アプリケーションのビルド
+echo "build app"
 cd ${DEPLOY_APP}/webapp/go
 go build -o isuconquest
