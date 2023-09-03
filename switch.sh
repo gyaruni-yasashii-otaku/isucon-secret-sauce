@@ -24,6 +24,6 @@ ln -s ${SWITCH_APP} ${TARGET_LINK}
 echo "switched app ${SWITCH_APP}"
 
 # アプリケーションのビルド
-echo "build app"
-cd ${DEPLOY_APP}/webapp/golang
-go build -o private-isu main.go
+# echo "build app"
+# cd ${DEPLOY_APP}/webapp/golang
+# go build -o private-isu main.go

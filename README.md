@@ -28,8 +28,8 @@ git clone git@github.com:Baplisca/ISUCON-tips.git
 chmod +x ~/ISUCON-tips/*
 
 # BRANCH_NAMEのコードをサーバーにデプロイ
-~/ISUCON-tips/deploy.sh ${BRANCH_NAME}
+bash ~/ISUCON-tips/deploy.sh ${BRANCH_NAME}
 
 # BRANCH_NAMEのコードでサーバーで動かす
-~/ISUCON-tips/switch.sh ${BRANCH_NAME}
+bash ~/ISUCON-tips/switch.sh ${BRANCH_NAME}
 ```
