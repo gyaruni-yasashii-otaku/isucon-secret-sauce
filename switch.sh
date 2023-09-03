@@ -16,9 +16,9 @@ BRANCH=$1
 SWITCH_APP=${CLONE_DIR}/${REPOSITORY}-${BRANCH}/webapp
 
 # remove the current symlink
-if [ -L "${TARGET_LINK}" ]; then
+if [ "${TARGET_LINK}" ]; then
     echo "delete previous symlink ${TARGET_LINK}"
-    rm ${TARGET_LINK}
+    rm -rf ${TARGET_LINK}
 fi
 
 ln -s ${SWITCH_APP} ${TARGET_LINK}
