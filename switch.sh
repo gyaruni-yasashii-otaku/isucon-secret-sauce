@@ -21,8 +21,10 @@ if [ -e "${TARGET_LINK}" ]; then
     rm -rf ${TARGET_LINK}
 fi
 
-ln -s ${SWITCH_APP} ${TARGET_LINK}
+DIRECTORY_PATH="$(dirname "${TARGET_LINK}")"
+ln -s ${SWITCH_APP} ${DIRECTORY_PATH}
 echo "switched app ${SWITCH_APP}"
+ls -lat ${DIRECTORY_PATH}
 
 # アプリケーションのビルド
 # echo "build app"
