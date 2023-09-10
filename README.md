@@ -1,4 +1,4 @@
-# ISUCON-tips
+# isucon-secret-sauce
 
 ISUCON の秘伝のタレ
 
@@ -16,20 +16,20 @@ ISUCON の秘伝のタレ
 - 必要に応じて config.sh の設定をする
 
 ```bash
-vi ~/ISUCON-tips/config.sh
+vi ~/isucon-secret-sauce/config.sh
 ```
 
 ## How to use
 
 ```bash
-# サーバーにISUCON-tipsをclone
+# サーバーにisucon-secret-sauceをclone
 cd ~
-git clone git@github.com:Baplisca/ISUCON-tips.git
-chmod +x ~/ISUCON-tips/*
+git clone git@github.com:gyaruni-yasashii-otaku/isucon-secret-sauce.git
+chmod +x ~/isucon-secret-sauce/*
 
 # BRANCH_NAMEのコードをサーバーにデプロイ
-bash ~/ISUCON-tips/deploy.sh ${BRANCH_NAME}
+bash ~/isucon-secret-sauce/deploy.sh ${BRANCH_NAME}
 
 # BRANCH_NAMEのコードでサーバーで動かす
-bash ~/ISUCON-tips/switch.sh ${BRANCH_NAME}
+bash ~/isucon-secret-sauce/switch.sh ${BRANCH_NAME}
 ```

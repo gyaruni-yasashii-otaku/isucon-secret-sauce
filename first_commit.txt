@@ -17,7 +17,7 @@ rm -rf .git
 git init
 
 # さっきのプライベートリポジトリのURLをオリジンURLにする
-git remote add origin git@github.com:Baplisca/private-repo.git
+git remote add origin git@github.com:gyaruni-yasashii-otaku/private-repo.git
 
 git add　.
 git commit -m "first commit"
