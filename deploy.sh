@@ -1,12 +1,12 @@
 #!/bin/bash -euo
 
 echo "load other sh scripts"
-. ~/ISUCON-tips/config.sh
-. ~/ISUCON-tips/common.sh
+. ~/isucon-secret-sauce/config.sh
+. ~/isucon-secret-sauce/common.sh
 
 # Argument check
 if [ $# -ne 1 ]; then
-    echo "Argument Error: please set argument. ex) ~/ISUCON-tips/deploy.sh main"
+    echo "Argument Error: please set argument. ex) ~/isucon-secret-sauce/deploy.sh main"
     exit 1
 fi
 

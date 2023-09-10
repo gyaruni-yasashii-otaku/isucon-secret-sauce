@@ -2,12 +2,12 @@
 
 # /webapp を指定のブランチに置き換える(シムリンク切り替え)
 
-. ~/ISUCON-tips/config.sh
-. ~/ISUCON-tips/common.sh
+. ~/isucon-secret-sauce/config.sh
+. ~/isucon-secret-sauce/common.sh
 
 # Argument check
 if [ $# -ne 1 ]; then
-    echo "Argument Error: please set argument. ex) ~/ISUCON-tips/switch.sh main"
+    echo "Argument Error: please set argument. ex) ~/isucon-secret-sauce/switch.sh main"
     exit 1
 fi
 

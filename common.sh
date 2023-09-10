@@ -1,6 +1,6 @@
 #!/bin/bash -euo
 
-. ~/ISUCON-tips/config.sh
+. ~/isucon-secret-sauce/config.sh
 
 function getSource() {
     local BRANCH=$1
