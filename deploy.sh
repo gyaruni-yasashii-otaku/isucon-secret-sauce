@@ -1,4 +1,5 @@
-#!/bin/bash -euo
+#!/bin/bash
+set -euo
 
 echo "load other sh scripts"
 . ~/isucon-secret-sauce/config.sh
@@ -11,7 +12,7 @@ if [ $# -ne 1 ]; then
 fi
 
 BRANCH=$1
-DEPLOY_APP=${CLONE_DIR}/${REPOSITORY}-${BRANCH}
+DEPLOY_APP=${CLONE_DIR}/${MY_REPOSITORY}-${BRANCH}
 
 # BRANCHの最新コードを取る
 echo "getSource BRANCH:${BRANCH}"
