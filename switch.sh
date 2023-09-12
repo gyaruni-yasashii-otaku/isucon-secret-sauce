@@ -1,4 +1,5 @@
-#!/bin/bash -euo
+#!/bin/bash
+set -euo
 
 # /webapp を指定のブランチに置き換える(シムリンク切り替え)
 
@@ -13,7 +14,7 @@ fi
 
 BRANCH=$1
 
-SWITCH_APP=${CLONE_DIR}/${REPOSITORY}-${BRANCH}/webapp
+SWITCH_APP=${CLONE_DIR}/${MY_REPOSITORY}-${BRANCH}/webapp
 
 # remove the current symlink
 if [ -e "${TARGET_LINK}" ]; then

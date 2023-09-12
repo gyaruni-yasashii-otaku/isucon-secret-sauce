@@ -27,8 +27,8 @@ git add .
 git commit -m "config to match production settings"
 git push
 
-# Organizationsにプライベートリポジトリを作成した後、以下を実行
-bash ~/isucon-secret-sauce/first_commit.sh ${private_repository_name}
+# Organizationsにプライベートリポジトリを作成してconfig修正後、以下を実行
+bash ~/isucon-secret-sauce/first_commit.sh
 
 ```
 
