@@ -31,3 +31,5 @@ ls -lat ${DIRECTORY_PATH}
 # echo "build app"
 # cd ${DEPLOY_APP}/webapp/golang
 # go build -o private-isu main.go
+
+notifyDiscord "[switched.sh] switched to ${DEPLOY_APP}"

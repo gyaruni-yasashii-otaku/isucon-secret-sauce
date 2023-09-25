@@ -17,3 +17,5 @@ DEPLOY_APP=${CLONE_DIR}/${MY_REPOSITORY}-${BRANCH}
 # BRANCHの最新コードを取る
 echo "getSource BRANCH:${BRANCH}"
 getSource ${BRANCH}
+
+notifyDiscord "[deploy.sh] deployed to ${DEPLOY_APP}"
