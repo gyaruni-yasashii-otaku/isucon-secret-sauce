@@ -15,14 +15,14 @@ fi
 BRANCH=$1
 
 SWITCH_APP=${CLONE_DIR}/${MY_REPOSITORY}-${BRANCH}/webapp
-DIRECTORY_PATH="$(dirname "${TARGET_LINK}")"
 
 # remove the current symlink
-if [ -e "${DIRECTORY_PATH}/webapp" ]; then
-    echo "delete previous symlink ${DIRECTORY_PATH}/webapp"
-    rm -rf ${DIRECTORY_PATH}/webapp
+if [ -e "${TARGET_LINK}" ]; then
+    echo "delete previous symlink ${TARGET_LINK}"
+    rm -rf ${TARGET_LINK}
 fi
 
+DIRECTORY_PATH="$(dirname "${TARGET_LINK}")"
 ln -s ${SWITCH_APP} ${DIRECTORY_PATH}
 echo "switched app ${SWITCH_APP}"
 ls -lat ${DIRECTORY_PATH}
