@@ -31,3 +31,28 @@ function notifyDiscord() {
     EOS`
     eval ${curl}
 }
+
+# MySQLの再起動、NginXの再起動、APPのビルド・再起動
+function buildMysqlNginxAPP() {
+    # MySQL再起動
+    echo "restart mysql"
+    sudo systemctl restart mysql
+
+    # NginXの構文チェック
+    nginx -t
+
+    # 瞬断が発生しない再起動
+    echo "reload nginx"
+    nginx -s reload
+
+    # APPのビルド
+    echo "build app ${TARGET_LINK}/golang"
+    /home/isucon/local/go/bin/go build -o ${TARGET_LINK}/golang/ # ${TARGET_LINK}/golang 配下に作成
+
+    # APPの再起動
+    sudo systemctl stop isu-ruby
+    sudo systemctl disable isu-ruby
+    sudo systemctl stop isu-go
+    sudo systemctl enable isu-go
+    echo 'Restarted!'
+}

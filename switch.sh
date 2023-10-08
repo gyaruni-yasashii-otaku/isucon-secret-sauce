@@ -27,9 +27,4 @@ ln -s ${SWITCH_APP} ${DIRECTORY_PATH}
 echo "switched app ${SWITCH_APP}"
 ls -lat ${DIRECTORY_PATH}
 
-# アプリケーションのビルド
-# echo "build app"
-# cd ${DEPLOY_APP}/webapp/golang
-# go build -o private-isu main.go
-
 notifyDiscord "[switched.sh] switched to ${SWITCH_APP}"
