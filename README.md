@@ -6,10 +6,10 @@ ISUCON の秘伝のタレ
 
 - [x] first_commit.sh : 特定のリポジトリをクローンして、自分達のリポジトリに最初のコミットするまで
 - [x] deploy.sh : サーバーに指定ブランチのコードを deploy するもの
-- [x] switch.sh : 指定ブランチのコードを切り替えるもの
+- [x] switch.sh (build.sh) : 指定ブランチのコードを切り替えるもの
+- [x] build.sh : App のビルドや MySQL, Nginx を再起動するもの
 - [x] config.sh : コンフィグ
 - [x] common.sh : 一連の処理を関数化したもの
-- build.sh : App のビルドや DB, Nginx を再起動するもの
 
 ## Prepare
 
