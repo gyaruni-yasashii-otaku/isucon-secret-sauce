@@ -17,9 +17,10 @@ ISUCON の秘伝のタレ
 - 本番の設定に合わせて config.sh の設定をする
 
 ```bash
-# ローカルにisucon-secret-sauceをclone
+# ローカルにisucon-secret-sauceとisucon-secret-env-variablesをclone
 cd ~
 git clone git@github.com:gyaruni-yasashii-otaku/isucon-secret-sauce.git
+git clone git@github.com:gyaruni-yasashii-otaku/isucon-secret-env-variables.git
 
 # ローカルでconfigを変更し、git反映
 vi ~/isucon-secret-sauce/config.sh
@@ -35,9 +36,10 @@ bash ~/isucon-secret-sauce/first_commit.sh
 ## How to use on the server
 
 ```bash
-# サーバーにisucon-secret-sauceをclone
+# サーバーにisucon-secret-sauceとisucon-secret-env-variablesをclone
 cd ~
 git clone git@github.com:gyaruni-yasashii-otaku/isucon-secret-sauce.git
+git clone git@github.com:gyaruni-yasashii-otaku/isucon-secret-env-variables.git
 chmod +x ~/isucon-secret-sauce/*
 
 # BRANCH_NAMEのコードをサーバーにデプロイ
